@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Responsive Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            width: auto;
+            margin-top: 0;
+        }
+        .inline-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .inline-group label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+        </div>
+        <div class="form-group">
+            <label for="url">Website:</label>
+            <input type="url" id="url" name="url">
+        </div>
+        <div class="form-group">
+            <label for="number">Number:</label>
+            <input type="number" id="number" name="number" min="0" max="100">
+        </div>
+        <div class="form-group">
+            <label for="range">Range:</label>
+            <input type="range" id="range" name="range" min="0" max="100">
+        </div>
+        <div class="form-group">
+            <label for="color">Color:</label>
+            <input type="color" id="color" name="color">
+        </div>
+        <div class="form-group">
+            <label for="file">Upload File:</label>
+            <input type="file" id="file" name="file">
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <div class="inline-group">
+                <label><input type="radio" id="male" name="gender" value="male" required> Male</label>
+                <label><input type="radio" id="female" name="gender" value="female"> Female</label>
+                <label><input type="radio" id="other" name="gender" value="other"> Other</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="hobbies">Hobbies:</label>
+            <div class="inline-group">
+                <label><input type="checkbox" id="sports" name="hobbies" value="sports"> Sports</label>
+                <label><input type="checkbox" id="music" name="hobbies" value="music"> Music</label>
+                <label><input type="checkbox" id="travel" name="hobbies" value="travel"> Travel</label>
+                <label><input type="checkbox" id="reading" name="hobbies" value="reading"> Reading</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="">Select a country</option>
+                <option value="us">United States</option>
+                <option value="ca">Canada</option>
+                <option value="uk">United Kingdom</option>
+                <option value="au">Australia</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio" rows="5" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+
+
+
